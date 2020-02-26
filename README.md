@@ -8,17 +8,14 @@
 
 2、script中调用方法示例：
 
-  layui.config({
-      base: '/layui/examples/layuiCropper/' //examples为自定义layui组件目录，如果没有可以自行创建
-  }),
-  
-  layui.use(['admin', 'layuiCropper'], function(){
-    
-    var formData = new FormData();
+    layui.config({
+        base: '/layui/examples/layuiCropper/' //examples为自定义layui组件目录，如果没有可以自行创建
+    }),layui.use(['admin', 'layuiCropper'], function(){
+        var formData = new FormData();
 		
-    /*
-    var options = {
-        elem: '#layuiadmin-upload-useradmin',
+        /*
+        var options = {
+            elem: '#layuiadmin-upload-useradmin',
 			  autoCropArea: .1,
 			  aspectRatio: 1/1,
 			  highlight: false,
@@ -33,19 +30,19 @@
 				    console.log(formData, result);
 				    formData.append('file', result.blob, result.filename);
 			  }
-    };
-    layui.layuiCropper.render(options);
-    */
+        };
+        layui.layuiCropper.render(options);
+        */
     
-    layui.layuiCropper.render({
-          elem: '#layuiadmin-upload-useradmin',
-			    done: function(result){ 
-				      console.log(result);
-				      formData.append('file', result.blob, result.filename);
-			    }
-     });
+        layui.layuiCropper.render({
+            elem: '#layuiadmin-upload-useradmin',
+	        done: function(result){ 
+		    console.log(result);
+		    formData.append('file', result.blob, result.filename);
+		}
+         });
      
- });
+     });
 
 3、参数设置
 options = {
