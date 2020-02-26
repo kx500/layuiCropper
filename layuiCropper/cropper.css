@@ -1,0 +1,8 @@
+#showEdit {display: none;width:100%;height: 100%;position: fixed;top:0;left: 0;z-index: 19891016; }
+#showEdit .bg { height:90%; }
+#showEdit #report {position: static;height: 100%;}
+#showEdit .cropper-dashed, .cropper-modal {filter: alpha(opacity=80) !important;opacity: .8 !important;}
+#showEdit .control {position:absolute; bottom:0px; width:100%;text-align: center; height:10%; background-color:#000; }
+#showEdit .ControlBtn { margin-top: -25px; position: absolute; width: 100%; top: 50%; }
+#showEdit .ControlBtn a { color: #FFF; background-color: #09F; text-align: center; line-height: 50px; height: 50px; width: 50px; display: inline-block; border-radius: 50%; margin-right: 20px; margin-left: 20px; text-decoration: none !important; }
+#showEdit .msgtip { position:absolute; top:10px;color: #FFF; font-size:13px; width:100%; z-index:1; text-align: center;}
