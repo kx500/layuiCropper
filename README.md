@@ -7,9 +7,11 @@
 1、将layuiCropper下载后复制到layui/examples目录下
 
 2、script中调用方法示例：
+
   layui.config({
       base: '/layui/examples/layuiCropper/' //examples为自定义layui组件目录，如果没有可以自行创建
   }),
+  
   layui.use(['admin', 'layuiCropper'], function(){
     
     var formData = new FormData();
