@@ -43,16 +43,18 @@ layui.use(['admin', 'layuiCropper'], function(){
 				      formData.append('file', result.blob, result.filename);
 			    }
      });
-});
+     
+ });
 
 3、参数设置
-
 options = {
+
     elem 文件选择器ID
     imgWidth 返回blob宽度
     imgHeight: 返回blob高度
     done 剪切完成回调函数,返回一个对象 { blob, filename }
     ... 其余参数和 Cropper.js 参数设置一样，请参考 https://github.com/fengyuanchen/cropperjs#options
 }
+
 
 
