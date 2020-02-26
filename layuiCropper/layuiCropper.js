@@ -2,7 +2,7 @@
 layui.define(function(exports){ //提示：模块也可以依赖其它模块，如：layui.define('layer', callback);
     window.jQuery = layui.$;
 
-    layui.$.getScript("/static/layui/examples/layuiCropper/cropper.min.js").done(function() {
+    layui.$.getScript(layui.layer.path+"examples/layuiCropper/cropper.min.js").done(function() {
 		var obj = {
 			options: {},
 			// 裁剪组件初始化，在界面中加入默认隐藏的裁剪界面
@@ -10,8 +10,8 @@ layui.define(function(exports){ //提示：模块也可以依赖其它模块，�
 				var self = this;
 				obj.options = e;
 				
-				var cropperHtml = '<link rel="stylesheet" href="/static/layui/examples/layuiCropper/cropper.min.css">\n'+
-				    '<link rel="stylesheet" href="/static/layui/examples/layuiCropper/cropper.css">'+
+				var cropperHtml = '<link rel="stylesheet" href="'+layui.layer.path+'examples/layuiCropper/cropper.min.css">\n'+
+				    '<link rel="stylesheet" href="'+layui.layer.path+'examples/layuiCropper/cropper.css">'+
 					'<div id="showEdit">'+
 					'  <div class="msgtip">图片剪切</div>'+
 					'  <div class="bg"><img id="cropImage" src=""></div>'+
@@ -49,8 +49,8 @@ layui.define(function(exports){ //提示：模块也可以依赖其它模块，�
 					{
 						image.crossOrigin='anonymous';//解决跨域图片问题
 						image.cropper("getCroppedCanvas",{
-							width: obj.options.minCropBoxWidth,
-							height: obj.options.minCropBoxHeight
+							width: obj.options.imgWidth,
+							height: obj.options.imgHeight
 						}).toBlob(function(blob){
 							layui.$("#showEdit").fadeOut();
 						    return obj.options.done({ blob: blob, filename: self.file.name });
