@@ -11,6 +11,7 @@ layui.define(function(exports){ //提示：模块也可以依赖其它模块，�
 				obj.options = e;
 				
 				var cropperHtml = '<link rel="stylesheet" href="/static/layui/examples/layuiCropper/cropper.min.css">\n'+
+				    '<link rel="stylesheet" href="/static/layui/examples/layuiCropper/cropper.css">'+
 					'<div id="showEdit">'+
 					'  <div class="msgtip">图片剪切</div>'+
 					'  <div class="bg"><img id="cropImage" src=""></div>'+
